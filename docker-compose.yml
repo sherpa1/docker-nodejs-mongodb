@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  api:
+    container_name: api_hellodocker
+    image: node
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./api/:/app
+    working_dir: /app
+    env_file:
+      - ./api/.env
+    #command: bash -c 'npm run dev' #hot reloading with nodemon for dev only
+    command: bash -c 'npm install && npm start' #install node modules then start
+    #command: npm start #production only
+  mongodb:
+    container_name: mongodb_hellodocker
+    image: mongo
+    volumes:
+      - ./mongodb_data:/data/db
+    ports:
+      - "27018:27017"
+    env_file:
+      - ./mongodb/.env
+  mongoexpress:
+    container_name: mongoexpress_hellodocker
+    image: mongo-express
+    ports:
+      - "7070:8080"
+    env_file:
+      - ./mongoexpress/.env

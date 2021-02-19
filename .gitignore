@@ -1,0 +1,5 @@
+api/node_modules
+api/.env
+mongodb/.env
+mongoexpress/.env
+mongodb_data
