@@ -16,6 +16,14 @@ Lorsque l'on souhaite ajouter une nouvelle dépendance (ex: nodemon), on modifie
 
 Il faut donc adapter à chaque fois que nécessaire la valeur de l'attribut "command" du service associé à l'application Node.js dans le fichier docker-compose.yml (cf. ci-dessous "Commandes utiles / Docker + Node.js")
 
+## Variables d'environnement
+
+En vous inspirant des fichiers .env.example, remplir les fichiers .env se trouvant dans :
+
+- ./api
+- ./mongoexpress
+- ./mongodb
+
 ## Commandes utiles
 
 ## Docker
